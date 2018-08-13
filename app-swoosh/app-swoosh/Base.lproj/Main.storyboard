@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--WelcomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nmA-Xw-sQH"/>
                         <viewControllerLayoutGuide type="bottom" id="Ubg-C3-kF0"/>
@@ -86,19 +86,15 @@
                             <constraint firstItem="qLX-bc-UX1" firstAttribute="width" secondItem="5zl-5r-pLq" secondAttribute="width" id="uAf-Vj-Ktm"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="bgImg" destination="dyE-iG-VyJ" id="wDB-2C-ewW"/>
-                        <outlet property="swoosh" destination="xEB-9P-VPM" id="oQk-Vw-iC4"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="96" y="18"/>
         </scene>
-        <!--View Controller-->
+        <!--LeagueVC-->
         <scene sceneID="Fll-Fb-4mI">
             <objects>
-                <viewController id="TAv-ET-yqH" sceneMemberID="viewController">
+                <viewController id="TAv-ET-yqH" customClass="LeagueVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="POF-76-bnP"/>
                         <viewControllerLayoutGuide type="bottom" id="lPM-2K-A2M"/>
@@ -148,8 +144,8 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bf-rT-1Z1" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
-                                <rect key="frame" x="20" y="666" width="374" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bf-rT-1Z1" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
+                                <rect key="frame" x="12" y="666" width="374" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.39728702910000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="EDS-3M-wqC"/>
@@ -159,6 +155,9 @@
                                 <state key="normal" title="NEXT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="onNextTapped:" destination="TAv-ET-yqH" eventType="touchUpInside" id="qPg-oa-Qn9"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="ddK-pv-5YH">
                                 <rect key="frame" x="0.0" y="40.000000000000007" width="414" height="120.66666666666669"/>
@@ -180,7 +179,6 @@
                                 <constraints>
                                     <constraint firstItem="Yty-av-kRy" firstAttribute="leading" secondItem="ddK-pv-5YH" secondAttribute="leading" id="6tH-vX-fXi"/>
                                     <constraint firstAttribute="trailing" secondItem="Yty-av-kRy" secondAttribute="trailing" id="fn6-3V-YBX"/>
-                                    <constraint firstItem="Yty-av-kRy" firstAttribute="top" secondItem="ddK-pv-5YH" secondAttribute="top" constant="40" id="kBC-UY-62D"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCi-mE-LDy">
@@ -214,16 +212,19 @@
                             <constraint firstAttribute="trailing" secondItem="ddK-pv-5YH" secondAttribute="trailing" id="zES-X8-mmU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="rGF-Lr-cVw" kind="show" identifier="skillVCSegue" id="VJh-Jy-z7J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9M1-Dn-AAB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="gpX-rT-hJg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="839.13043478260875" y="17.934782608695652"/>
         </scene>
-        <!--View Controller-->
+        <!--SkillVC-->
         <scene sceneID="JHa-Kf-Ppi">
             <objects>
-                <viewController id="rGF-Lr-cVw" sceneMemberID="viewController">
+                <viewController id="rGF-Lr-cVw" customClass="SkillVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eqp-en-IYm"/>
                         <viewControllerLayoutGuide type="bottom" id="wnk-jL-12S"/>
